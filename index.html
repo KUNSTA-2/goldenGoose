@@ -217,7 +217,12 @@ fetch('https://kunsta-2.github.io/goldenGoose/copen.json')
 	// Create the wind chart
 	Highcharts.chart('windChartContainer', {
 	    chart: {
-	        type: 'spline'
+	        type: 'spline',
+	        events: {
+	            load: function () {
+	                renderWindDirectionArrows(this);
+	            }
+	        }
 	    },
 	    title: {
 	        text: 'Wind Speed and Gust'
@@ -237,11 +242,7 @@ fetch('https://kunsta-2.github.io/goldenGoose/copen.json')
 	        name: 'Wind Gust',
 	        data: dataJson.timeserie.map(item => item.windGust)
 	    }]
-	    events: {
-	        load: function () {
-	            renderWindDirectionArrows(this);
-	        }
-	    }
+	    // ... additional configurations as needed ...
 	});
     })
     .catch(error => {
