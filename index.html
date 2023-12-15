@@ -86,7 +86,15 @@ function syncExtremes(e) {
         });
     }
 }
-
+// Fetch and parse the JSON data
+fetch('copen.json')
+    .then(response => response.json())
+    .then(data => {
+        // Parse the data
+        const categories = data.timeseries.map(item => new Date(item).toLocaleDateString());
+        const tempData = data.timeseries.map(item => item.temp);
+        const precipData = data.timeseries.map(item => item.precip1);
+	    
 // Function to create a chart from index.html
 function createIndexChart() {
     Highcharts.chart('indexChartContainer', {
@@ -153,8 +161,7 @@ function createIndexChart() {
             name: 'Precipitation',
             type: 'column',
             yAxis: 1,
-            data: [27.6, 28.8, 21.7, 34.1, 29.0, 28.4, 45.6, 51.7, 39.0,
-                60.0, 28.6, 32.1],
+            data: precipData,
             tooltip: {
                 valueSuffix: ' mm'
             }
@@ -162,14 +169,16 @@ function createIndexChart() {
         }, {
             name: 'Temperature',
             type: 'spline',
-            data: [-13.6, -14.9, -5.8, -0.7, 3.1, 13.0, 14.5, 10.8, 5.8,
-                -0.7, -11.0, -16.4],
+            data: tempData,
             tooltip: {
                 valueSuffix: '°C'
             }
-        }]
+            }]
+        });
+    })
+    .catch(error => {
+        console.error('Error fetching or parsing the JSON data:', error);
     });
-}
 
 // Get the data. The contents of the data file can be viewed at
 Highcharts.ajax({
