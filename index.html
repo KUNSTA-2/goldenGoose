@@ -9,23 +9,22 @@
     <script src="https://code.highcharts.com/modules/exporting.js"></script>
     <script src="https://code.highcharts.com/modules/export-data.js"></script>
     <script src="https://code.highcharts.com/modules/accessibility.js"></script>
-    <!-- Add any other necessary scripts here -->
+
 </head>
 <body>
     <figure class="highcharts-figure">
 	<div id="indexChartContainer"></div>
 	<div id="windChartContainer"></div>
-        <div id="container"></div>
+    
         <p class="highcharts-description">
-            Synchronized charts demonstration.
+            Synkroniserede grafer for wind og nedbør.
         </p>
     </figure>
 
-    <!-- JavaScript will go here -->
 <script>
     ['mousemove', 'touchmove', 'touchstart'].forEach(function (eventType) {
     // Apply event listeners to both containers
-    [document.getElementById('container'), document.getElementById('indexChartContainer')].forEach(function(container) {
+    [document.getElementById('indexChartContainer'), document.getElementById('windChartContainer')].forEach(function(container) {
         container.addEventListener(
             eventType,
             function (e) {
@@ -65,9 +64,6 @@ Highcharts.Point.prototype.highlight = function (event) {
     this.series.chart.xAxis[0].drawCrosshair(event, this); // Show the crosshair
 };
 
-/**
- * Synchronize zooming through the setExtremes event handler.
- */
 function syncExtremes(e) {
     const thisChart = this.chart;
 
@@ -228,7 +224,7 @@ fetch('https://kunsta-2.github.io/goldenGoose/copen.json')
 	        text: 'Wind Speed and Gust'
 	    },
 	    xAxis: {
-	        categories: categories // Reuse the categories from the temp/precip chart
+	        categories: categories
 	    },
 	    yAxis: {
 	        title: {
@@ -249,94 +245,6 @@ fetch('https://kunsta-2.github.io/goldenGoose/copen.json')
         console.error('Error fetching or parsing the JSON data:', error);
     });
 
-// Get the data. The contents of the data file can be viewed at
-Highcharts.ajax({
-    url: 'https://cdn.jsdelivr.net/gh/highcharts/highcharts@v7.0.0/samples/data/activity.json',
-    dataType: 'text',
-    success: function (activity) {
-
-        activity = JSON.parse(activity);
-        activity.datasets.forEach(function (dataset, i) {
-
-            // Add X values
-            dataset.data = Highcharts.map(dataset.data, function (val, j) {
-                return [activity.xData[j], val];
-            });
-
-            const chartDiv = document.createElement('div');
-            chartDiv.className = 'chart';
-            document.getElementById('container').appendChild(chartDiv);
-
-            Highcharts.chart(chartDiv, {
-                chart: {
-                    marginLeft: 40, // Keep all charts left aligned
-                    spacingTop: 20,
-                    spacingBottom: 20
-                },
-                title: {
-                    text: dataset.name,
-                    align: 'left',
-                    margin: 0,
-                    x: 30
-                },
-                credits: {
-                    enabled: false
-                },
-                legend: {
-                    enabled: false
-                },
-                xAxis: {
-                    crosshair: true,
-                    events: {
-                        setExtremes: syncExtremes
-                    },
-                    labels: {
-                        format: '{value} km'
-                    },
-                    accessibility: {
-                        description: 'Kilometers',
-                        rangeDescription: '0km to 6.5km'
-                    }
-                },
-                yAxis: {
-                    title: {
-                        text: null
-                    }
-                },
-                tooltip: {
-                    positioner: function () {
-                        return {
-                            // right aligned
-                            x: this.chart.chartWidth - this.label.width,
-                            y: 10 // align to title
-                        };
-                    },
-                    borderWidth: 0,
-                    backgroundColor: 'none',
-                    pointFormat: '{point.y}',
-                    headerFormat: '',
-                    shadow: false,
-                    style: {
-                        fontSize: '18px'
-                    },
-                    valueDecimals: dataset.valueDecimals
-                },
-                series: [{
-                    data: dataset.data,
-                    name: dataset.name,
-                    type: dataset.type,
-                    color: Highcharts.getOptions().colors[i],
-                    fillOpacity: 0.3,
-                    tooltip: {
-                        valueSuffix: ' ' + dataset.unit
-                    }
-                }]
-            });
-        });
-    }
-}); // This closing brace was missing
-
-// You can place this function call where you initialize your charts
 createIndexChart();
 
 	</script>
