@@ -87,7 +87,7 @@ function syncExtremes(e) {
     }
 }
 
-function parseTime(timeStr, timezone) {
+function parseTime(timeStr) {
     const year = parseInt(timeStr.substring(0, 4), 10);
     const month = parseInt(timeStr.substring(4, 6), 10) - 1; // Month is 0-indexed
     const day = parseInt(timeStr.substring(6, 8), 10);
@@ -95,26 +95,21 @@ function parseTime(timeStr, timezone) {
     const minute = parseInt(timeStr.substring(10, 12), 10);
     const second = parseInt(timeStr.substring(12, 14), 10);
 
-    const date = new Date(Date.UTC(year, month, day, hour, minute, second));
-    // Adjust for timezone (assuming timezone is in hours)
-    date.setHours(date.getHours() + timezone);
+    const date = new Date(year, month, day, hour, minute, second);
     return date;
 }
 
 // Fetch and parse the JSON data
-fetch('https://cors-anywhere.herokuapp.com/https://github.com/KUNSTA-2/goldenGoose/blob/main/copen.json')
+fetch('https://kunsta-2.github.io/goldenGoose/copen.json')
     .then(response => response.json())
-    .then(data => {
+    .then(dataJson => {
         // Parse the data
-        const categories = data.timeseries.map(item => parseTime(item.time, data.timezone).toLocaleDateString());
-        const times = data.timeseries.map(item => parseTime(item.time, data.timezone).toLocaleTimeString());
-        const tempData = data.timeseries.map(item => item.temp);
-        const precipData = data.timeseries.map(item => item.precip1);
-	    
-// Function to create a chart from index.html
-//function createIndexChart() {
+        const categories = dataJson.timeserie.map(item => parseTime(item.time).toLocaleDateString());
+        const times = dataJson.timeserie.map(item => parseTime(item.time).toLocaleTimeString());
+        const tempData = dataJson.timeserie.map(item => item.temp);
+        const precipData = dataJson.timeserie.map(item => item.precip1);
 
-	    // Create the chart
+        // Create the chart
         Highcharts.chart('indexChartContainer', {
         chart: {
             zoomType: 'xy'
