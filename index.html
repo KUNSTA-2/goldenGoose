@@ -14,7 +14,8 @@
 <body>
     <figure class="highcharts-figure">
 	<div id="indexChartContainer"></div>
-        <div id="container"></div>        
+	<div id="windChartContainer"></div>
+        <div id="container"></div>
         <p class="highcharts-description">
             Synchronized charts demonstration.
         </p>
@@ -97,6 +98,27 @@ function parseTime(timeStr) {
 
     const date = new Date(year, month, day, hour, minute, second);
     return date;
+}
+
+function renderWindDirectionArrows(chart) {
+    dataJson.timeserie.forEach((item, index) => {
+        const windDirection = item.windDegree;
+        const x = chart.xAxis[0].toPixels(index) - 10; // Adjust position as needed
+        const y = chart.plotHeight + chart.plotTop + 20; // Position below the chart
+
+        // SVG path for an arrow, rotate based on wind direction
+        const arrowPath = `M0,0 L0,10 L5,5 L10,10 L10,0 Z`;
+        chart.renderer.path(arrowPath)
+            .attr({
+                'stroke-width': 1,
+                stroke: 'black',
+                fill: 'black',
+                rotation: windDirection,
+                translateX: x,
+                translateY: y
+            })
+            .add();
+    });
 }
 
 // Fetch and parse the JSON data
@@ -192,6 +214,35 @@ fetch('https://kunsta-2.github.io/goldenGoose/copen.json')
             }
             }]
         });
+	// Create the wind chart
+	Highcharts.chart('windChartContainer', {
+	    chart: {
+	        type: 'spline'
+	    },
+	    title: {
+	        text: 'Wind Speed and Gust'
+	    },
+	    xAxis: {
+	        categories: categories // Reuse the categories from the temp/precip chart
+	    },
+	    yAxis: {
+	        title: {
+	            text: 'Wind Speed (km/h)'
+	        }
+	    },
+	    series: [{
+	        name: 'Wind Speed',
+	        data: dataJson.timeserie.map(item => item.windSpeed)
+	    }, {
+	        name: 'Wind Gust',
+	        data: dataJson.timeserie.map(item => item.windGust)
+	    }]
+	    events: {
+	        load: function () {
+	            renderWindDirectionArrows(this);
+	        }
+	    }
+	});
     })
     .catch(error => {
         console.error('Error fetching or parsing the JSON data:', error);
