@@ -130,8 +130,8 @@ function customTooltipFormatter(context) {
     let indexChart = Highcharts.charts[0]; // Assuming this is the index chart with temperature and precipitation
     let windChart = Highcharts.charts[1]; // Assuming this is the wind chart with wind speed and gust
 
-    let indexPoint = indexChart.series[0].data[context.point.index]; // Temperature
-    let precipPoint = indexChart.series[1].data[context.point.index]; // Precipitation
+    let indexPoint = indexChart.series[1].data[context.point.index]; // Temperature
+    let precipPoint = indexChart.series[0].data[context.point.index]; // Precipitation
     let windSpeedPoint = windChart.series[0].data[context.point.index]; // Wind Speed
     let windGustPoint = windChart.series[1].data[context.point.index]; // Wind Gust
 
@@ -139,8 +139,8 @@ function customTooltipFormatter(context) {
     let tooltipContent = `<b>Time: ${indexPoint.category}</b><br/>`;
     tooltipContent += `Temperature: ${indexPoint.y}°C<br/>`;
     tooltipContent += `Precipitation: ${precipPoint.y} mm<br/>`;
-    tooltipContent += `Wind Speed: ${windSpeedPoint.y} km/h<br/>`;
-    tooltipContent += `Wind Gust: ${windGustPoint.y} km/h`;
+    tooltipContent += `Wind Speed: ${windSpeedPoint.y} m/s<br/>`;
+    tooltipContent += `Wind Gust: ${windGustPoint.y} m/s`;
 
     return tooltipContent;
 }
