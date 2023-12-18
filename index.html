@@ -64,6 +64,9 @@ Highcharts.Point.prototype.highlight = function (event) {
     this.series.chart.xAxis[0].drawCrosshair(event, this); // Show the crosshair
 };
 
+/**
+ * Synchronize zooming through the setExtremes event handler.
+ */
 function syncExtremes(e) {
     const thisChart = this.chart;
 
@@ -224,7 +227,7 @@ fetch('https://kunsta-2.github.io/goldenGoose/copen.json')
 	        text: 'Wind Speed and Gust'
 	    },
 	    xAxis: {
-	        categories: categories
+	        categories: categories // Reuse the categories from the temp/precip chart
 	    },
 	    yAxis: {
 	        title: {
@@ -245,6 +248,7 @@ fetch('https://kunsta-2.github.io/goldenGoose/copen.json')
         console.error('Error fetching or parsing the JSON data:', error);
     });
 
+// You can place this function call where you initialize your charts
 createIndexChart();
 
 	</script>
