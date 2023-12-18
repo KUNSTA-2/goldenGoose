@@ -23,28 +23,23 @@
 
 <script>
 ['mousemove', 'touchmove', 'touchstart'].forEach(function (eventType) {
-    [document.getElementById('indexChartContainer'), document.getElementById('windChartContainer')].forEach(function(container) {
+    [document.getElementById('indexChartContainer'), document.getElementById('windChartContainer')].forEach(function(container, index) {
         container.addEventListener(
             eventType,
             function (e) {
-                let chart, point, i, event;
+                let chart = Highcharts.charts[index];
+                let event = chart.pointer.normalize(e);
+                let point = chart.series[0].searchPoint(event, true);
 
-                for (i = 0; i < Highcharts.charts.length; i = i + 1) {
-                    chart = Highcharts.charts[i];
-                    // Check if the event is within the current chart
-                    if (chart.container.contains(e.target)) {
-                        event = chart.pointer.normalize(e);
-                        point = chart.series[0].searchPoint(event, true);
-
-                        if (point) {
+                if (point) {
+                    Highcharts.charts.forEach((c, i) => {
+                        if (i === index) {
                             point.highlight(e);
-                            // Refresh tooltip for both charts
-                            Highcharts.charts.forEach(c => c.tooltip.refresh(point));
+                            c.tooltip.refresh(point); // Refresh tooltip only for the current chart
+                        } else {
+                            c.tooltip.hide(); // Hide tooltip for the other chart
                         }
-                    } else {
-                        // Hide tooltip for charts not under the mouse
-                        chart.tooltip.hide();
-                    }
+                    });
                 }
             }
         );
@@ -104,7 +99,7 @@ function parseTime(timeStr) {
     return date;
 }
 
-function renderWindDirectionArrows(chart) {
+function renderWindDirectionArrows(chart, dataJson) {
     dataJson.timeserie.forEach((item, index) => {
         const windDirection = item.windDegree;
         const x = chart.xAxis[0].toPixels(index) - 10; // Adjust position as needed
@@ -240,48 +235,51 @@ fetch('https://kunsta-2.github.io/goldenGoose/copen.json')
             }
             }]
         });
-	// Create the wind chart
-	Highcharts.chart('windChartContainer', {
-	    chart: {
-	        type: 'spline',
-	        events: {
-	            load: function () {
-	                renderWindDirectionArrows(this);
-	            }
-	        }
-	    },
-	    title: {
-	        text: 'Wind Speed and Gust'
-	    },
-	    xAxis: {
-	        categories: categories // Reuse the categories from the temp/precip chart
-	    },
-	    yAxis: {
-	        title: {
-	            text: 'Wind Speed (km/h)'
-	        }
-	    },
-		tooltip: {
-			formatter: function() {
-				return customTooltipFormatter(this);
-			}
-		},
-	    series: [{
-	        name: 'Wind Speed',
-	        data: dataJson.timeserie.map(item => item.windSpeed)
-	    }, {
-	        name: 'Wind Gust',
-	        data: dataJson.timeserie.map(item => item.windGust)
-	    }]
-	    // ... additional configurations as needed ...
-	});
+		// Create the wind chart
+		Highcharts.chart('windChartContainer', {
+			chart: {
+				type: 'spline',
+				events: {
+					load: function () {
+						renderWindDirectionArrows(this);
+					}
+				}
+			},
+			title: {
+				text: 'Wind Speed and Gust'
+			},
+			xAxis: {
+				categories: categories // Reuse the categories from the temp/precip chart
+			},
+			yAxis: {
+				title: {
+					text: 'Wind Speed (km/h)'
+				}
+			},
+			tooltip: {
+				formatter: function() {
+					return customTooltipFormatter(this);
+				}
+			},
+			events: {
+                load: function () {
+                    renderWindDirectionArrows(this, dataJson);
+                }
+            },
+			series: [{
+				name: 'Wind Speed',
+				data: dataJson.timeserie.map(item => item.windSpeed)
+			}, {
+				name: 'Wind Gust',
+				data: dataJson.timeserie.map(item => item.windGust)
+			}]			
+		});	
     })
+	
     .catch(error => {
         console.error('Error fetching or parsing the JSON data:', error);
     });
 
-// You can place this function call where you initialize your charts
-createIndexChart();
 
 	</script>
 </body>
