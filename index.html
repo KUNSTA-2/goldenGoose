@@ -22,8 +22,7 @@
     </figure>
 
 <script>
-    ['mousemove', 'touchmove', 'touchstart'].forEach(function (eventType) {
-    // Apply event listeners to both containers
+['mousemove', 'touchmove', 'touchstart'].forEach(function (eventType) {
     [document.getElementById('indexChartContainer'), document.getElementById('windChartContainer')].forEach(function(container) {
         container.addEventListener(
             eventType,
@@ -32,13 +31,19 @@
 
                 for (i = 0; i < Highcharts.charts.length; i = i + 1) {
                     chart = Highcharts.charts[i];
-                    // Find coordinates within the chart
-                    event = chart.pointer.normalize(e);
-                    // Get the hovered point
-                    point = chart.series[0].searchPoint(event, true);
+                    // Check if the event is within the current chart
+                    if (chart.container.contains(e.target)) {
+                        event = chart.pointer.normalize(e);
+                        point = chart.series[0].searchPoint(event, true);
 
-                    if (point) {
-                        point.highlight(e);
+                        if (point) {
+                            point.highlight(e);
+                            // Refresh tooltip for both charts
+                            Highcharts.charts.forEach(c => c.tooltip.refresh(point));
+                        }
+                    } else {
+                        // Hide tooltip for charts not under the mouse
+                        chart.tooltip.hide();
                     }
                 }
             }
@@ -120,6 +125,26 @@ function renderWindDirectionArrows(chart) {
     });
 }
 
+function customTooltipFormatter(context) {
+    // context represents the tooltip context of the current chart
+    let indexChart = Highcharts.charts[0]; // Assuming this is the index chart with temperature and precipitation
+    let windChart = Highcharts.charts[1]; // Assuming this is the wind chart with wind speed and gust
+
+    let indexPoint = indexChart.series[0].data[context.point.index]; // Temperature
+    let precipPoint = indexChart.series[1].data[context.point.index]; // Precipitation
+    let windSpeedPoint = windChart.series[0].data[context.point.index]; // Wind Speed
+    let windGustPoint = windChart.series[1].data[context.point.index]; // Wind Gust
+
+    // Aggregate data from all points
+    let tooltipContent = `<b>Time: ${indexPoint.category}</b><br/>`;
+    tooltipContent += `Temperature: ${indexPoint.y}°C<br/>`;
+    tooltipContent += `Precipitation: ${precipPoint.y} mm<br/>`;
+    tooltipContent += `Wind Speed: ${windSpeedPoint.y} km/h<br/>`;
+    tooltipContent += `Wind Gust: ${windGustPoint.y} km/h`;
+
+    return tooltipContent;
+}
+
 // Fetch and parse the JSON data
 fetch('https://kunsta-2.github.io/goldenGoose/copen.json')
     .then(response => response.json())
@@ -183,8 +208,10 @@ fetch('https://kunsta-2.github.io/goldenGoose/copen.json')
             opposite: true
         }],
         tooltip: {
-            shared: true
-        },
+			formatter: function() {
+				return customTooltipFormatter(this);
+			}
+		},
         legend: {
             align: 'left',
             x: 80,
@@ -234,6 +261,11 @@ fetch('https://kunsta-2.github.io/goldenGoose/copen.json')
 	            text: 'Wind Speed (km/h)'
 	        }
 	    },
+		tooltip: {
+			formatter: function() {
+				return customTooltipFormatter(this);
+			}
+		},
 	    series: [{
 	        name: 'Wind Speed',
 	        data: dataJson.timeserie.map(item => item.windSpeed)
