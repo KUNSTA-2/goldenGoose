@@ -13,12 +13,13 @@
 </head>
 <body>
     <figure class="highcharts-figure">
-	<div id="indexChartContainer"></div>
-	<div id="windChartContainer"></div>
-    
-        <p class="highcharts-description">
-            Synkroniserede grafer for wind og nedbør.
-        </p>
+		<div id="indexChartContainer"></div>
+		<div id="windChartContainer"></div>
+		<div id="windArrowChartContainer"></div>
+		
+		<p class="highcharts-description">
+				Synkroniserede grafer for wind og nedbør.
+		</p>
     </figure>
 
 <script>
@@ -99,38 +100,16 @@ function parseTime(timeStr) {
     return date;
 }
 
-function renderWindDirectionArrows(chart, dataJson) {
-    dataJson.timeserie.forEach((item, index) => {
-        const windDirection = item.windDegree;
-        const x = chart.xAxis[0].toPixels(index) - 10; // Adjust position as needed
-        const y = chart.plotHeight + chart.plotTop + 20; // Position below the chart
-
-        // SVG path for an arrow, rotate based on wind direction
-        const arrowPath = `M0,0 L0,10 L5,5 L10,10 L10,0 Z`;
-        chart.renderer.path(arrowPath)
-            .attr({
-                'stroke-width': 1,
-                stroke: 'black',
-                fill: 'black',
-                rotation: windDirection,
-                translateX: x,
-                translateY: y
-            })
-            .add();
-    });
-}
-
 function customTooltipFormatter(context) {
-    // context represents the tooltip context of the current chart
-    let indexChart = Highcharts.charts[0]; // Assuming this is the index chart with temperature and precipitation
-    let windChart = Highcharts.charts[1]; // Assuming this is the wind chart with wind speed and gust
+
+    let indexChart = Highcharts.charts[0];
+    let windChart = Highcharts.charts[1];
 
     let indexPoint = indexChart.series[1].data[context.point.index]; // Temperature
     let precipPoint = indexChart.series[0].data[context.point.index]; // Precipitation
     let windSpeedPoint = windChart.series[0].data[context.point.index]; // Wind Speed
     let windGustPoint = windChart.series[1].data[context.point.index]; // Wind Gust
 
-    // Aggregate data from all points
     let tooltipContent = `<b>Time: ${indexPoint.category}</b><br/>`;
     tooltipContent += `Temperature: ${indexPoint.y}°C<br/>`;
     tooltipContent += `Precipitation: ${precipPoint.y} mm<br/>`;
@@ -138,6 +117,58 @@ function customTooltipFormatter(context) {
     tooltipContent += `Wind Gust: ${windGustPoint.y} m/s`;
 
     return tooltipContent;
+}
+
+function createWindArrowChart(dataJson) {
+    Highcharts.chart('windArrowChartContainer', {
+        chart: {
+            type: 'scatter',
+            events: {
+                load: function () {
+                    renderWindArrows(this, dataJson);
+                }
+            }
+        },
+        title: {
+            text: 'Wind Direction Arrows'
+        },
+        xAxis: {
+            // Configure as needed
+        },
+        yAxis: {
+            title: {
+                text: 'Wind Direction (degrees)'
+            }
+        },
+        series: [{
+            data: [] // This series can be empty or used for additional data
+        }]
+    });
+}
+
+function renderWindArrows(chart, dataJson) {
+    if (!dataJson || !dataJson.timeserie) {
+        console.error('Invalid or missing dataJson');
+        return;
+    }
+
+    dataJson.timeserie.forEach((item, index) => {
+        const windDirection = item.windDegree;
+        const x = chart.xAxis[0].toPixels(index);
+        const y = chart.yAxis[0].toPixels(0);
+
+        const arrowPath = `M 0 0 L 0 10 L 5 5 L 10 10 L 10 0 Z`;
+        chart.renderer.path(arrowPath)
+            .attr({
+                'stroke-width': 1,
+                stroke: 'black',
+                fill: 'black',
+                rotation: windDirection,
+                translateX: x - 5,
+                translateY: y - 10
+            })
+            .add();
+    });
 }
 
 // Fetch and parse the JSON data
@@ -149,6 +180,8 @@ fetch('https://kunsta-2.github.io/goldenGoose/copen.json')
         const times = dataJson.timeserie.map(item => parseTime(item.time).toLocaleTimeString());
         const tempData = dataJson.timeserie.map(item => item.temp);
         const precipData = dataJson.timeserie.map(item => item.precip1);
+		
+		createWindArrowChart(dataJson);
 
         // Create the chart
         Highcharts.chart('indexChartContainer', {
@@ -238,18 +271,13 @@ fetch('https://kunsta-2.github.io/goldenGoose/copen.json')
 		// Create the wind chart
 		Highcharts.chart('windChartContainer', {
 			chart: {
-				type: 'spline',
-				events: {
-					load: function () {
-						renderWindDirectionArrows(this);
-					}
-				}
+				type: 'spline'				
 			},
 			title: {
 				text: 'Wind Speed and Gust'
 			},
 			xAxis: {
-				categories: categories // Reuse the categories from the temp/precip chart
+				categories: categories
 			},
 			yAxis: {
 				title: {
@@ -260,12 +288,7 @@ fetch('https://kunsta-2.github.io/goldenGoose/copen.json')
 				formatter: function() {
 					return customTooltipFormatter(this);
 				}
-			},
-			events: {
-                load: function () {
-                    renderWindDirectionArrows(this, dataJson);
-                }
-            },
+			},		
 			series: [{
 				name: 'Wind Speed',
 				data: dataJson.timeserie.map(item => item.windSpeed)
@@ -273,13 +296,14 @@ fetch('https://kunsta-2.github.io/goldenGoose/copen.json')
 				name: 'Wind Gust',
 				data: dataJson.timeserie.map(item => item.windGust)
 			}]			
-		});	
+		});
+		
     })
 	
     .catch(error => {
         console.error('Error fetching or parsing the JSON data:', error);
     });
-
+	
 
 	</script>
 </body>
