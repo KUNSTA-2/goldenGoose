@@ -181,8 +181,6 @@ fetch('https://kunsta-2.github.io/goldenGoose/copen.json')
         const tempData = dataJson.timeserie.map(item => item.temp);
         const precipData = dataJson.timeserie.map(item => item.precip1);
 		
-		createWindArrowChart(dataJson);
-
         // Create the chart
         Highcharts.chart('indexChartContainer', {
         chart: {
@@ -297,6 +295,8 @@ fetch('https://kunsta-2.github.io/goldenGoose/copen.json')
 				data: dataJson.timeserie.map(item => item.windGust)
 			}]			
 		});
+		
+		createWindArrowChart(dataJson);
 		
     })
 	
