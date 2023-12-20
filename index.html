@@ -119,13 +119,13 @@ function customTooltipFormatter(context) {
     return tooltipContent;
 }
 
-function createWindArrowChart(dataJson) {
+function createWindArrowChart(dataJson, categories) {
     Highcharts.chart('windArrowChartContainer', {
         chart: {
             type: 'scatter',
             events: {
                 load: function () {
-                    renderWindArrows(this, dataJson);
+                    renderWindArrows(this, dataJson, categories);
                 }
             }
         },
@@ -146,25 +146,28 @@ function createWindArrowChart(dataJson) {
     });
 }
 
-function renderWindArrows(chart, dataJson) {
+function renderWindArrows(windChart, dataJson, categories) {
     if (!dataJson || !dataJson.timeserie) {
         console.error('Invalid or missing dataJson');
         return;
     }
 
+    // Assuming windChart has the same xAxis categories as the timestamps
+    const new-categories = windChart.xAxis[0].categories;
+
     dataJson.timeserie.forEach((item, index) => {
         const windDirection = item.windDegree;
-        const x = chart.xAxis[0].toPixels(index);
-        const y = chart.yAxis[0].toPixels(0);
+        const timestamp = item.time; // Replace with the actual timestamp property
+        const categoryIndex = new-categories.indexOf(timestamp);
+        const x = windChart.xAxis[0].toPixels(categoryIndex);
+        const y = 50; // Fixed y coordinate, adjust as needed
 
-        const arrowPath = `M 0 0 L 0 10 L 5 5 L 10 10 L 10 0 Z`;
-        chart.renderer.path(arrowPath)
+        console.log(`Item ${index}: windDegree = ${windDirection}, x = ${x}, y = ${y}`);
+
+        windChart.renderer.image('https://png.pngtree.com/element_our/sm/20180308/sm_5aa0fdd386c8a.png', x - 10, y - 10, 20, 20)
             .attr({
-                'stroke-width': 1,
-                stroke: 'black',
-                fill: 'black',
                 rotation: windDirection,
-                translateX: x - 5,
+                translateX: x - 10,
                 translateY: y - 10
             })
             .add();
@@ -296,7 +299,7 @@ fetch('https://kunsta-2.github.io/goldenGoose/copen.json')
 			}]			
 		});
 		
-		createWindArrowChart(dataJson);
+		createWindArrowChart(dataJson, categories);
 		
     })
 	
