@@ -8,165 +8,135 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-	<script src="https://cdn.jsdelivr.net/npm/luxon@3.4.4/build/global/luxon.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/luxon@3.4.4/build/global/luxon.min.js"></script>
+    <style>
+        #mapPopup {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 1000;
+            background-color: white;
+            padding: 10px;
+            border: 1px solid #ccc;
+            box-shadow: 0px 0px 10px #ccc;
+			width: 600px;
+			height: 500px;
+        }
+        #overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 999;
+        }
+    </style>
 </head>
 <body>
     <h1>Weather Data Visualization</h1>
     <button id="showMapButton">Show Map</button>
 
-    <div id="mapPopup" style="display: none;">
+    <div id="overlay"></div>
+    <div id="mapPopup">
         <div id="map" style="width: 100%; height: 400px;"></div>
         <button id="closeMapButton">Close Map</button>
     </div>
 
+    <h2 id="chartTitle"></h2>
     <canvas id="weatherChart" width="400" height="200"></canvas>
 
     <script>
         let map;
-        let marker;
-        let chart;
+let marker;
+let chart;
 
-        // Function to initialize the map and marker
-        function initializeMap() {
-            // Initialize the map with Denmark centered in a bounding box
-            map = L.map('map', {
-                center: [55.6761, 10.5687], // Centered on Denmark
-                zoom: 7, // Initial zoom level
-                layers: [
-                    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-                        maxZoom: 19,
-                    })
-                ]
-            });
+// Function to initialize the map and marker
+function initializeMap() {
+    map = L.map('map').setView([55.6761, 12.5683], 13);
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        maxZoom: 19,
+    }).addTo(map);
 
-            // Define the bounding box for Denmark
-            const bounds = [[54.0, 8.0], [58.0, 15.0]]; // [Southwest coordinates, Northeast coordinates]
+    map.on('click', function(e) {
+        marker.setLatLng(e.latlng);
+        fetchDataAndDrawChart(e.latlng.lat, e.latlng.lng);
+        closeMapPopup();
+    });
 
-            // Set the map view to the specified bounding box
-            map.fitBounds(bounds);
+    marker = L.marker([55.6761, 12.5683]).addTo(map);
+}
 
-            // Create a marker that will be moved to the clicked location
-            marker = L.marker([55.715, 12.561]).addTo(map);
-			
-			// Initialize the Chart.js chart
-			const ctx = document.getElementById('weatherChart').getContext('2d');
-			chart = new Chart(ctx, {
-				type: 'line',
-				data: {
-					labels: [],
-					datasets: [
-						{
-							label: 'Temperature (°C)',
-							data: [],
-							borderColor: 'rgba(75, 192, 192, 1)',
-							fill: false
-						},
-						{
-							label: 'Precipitation',
-							data: [],
-							borderColor: 'rgba(255, 99, 132, 1)',
-							fill: false
-						}
-					]
-				},
-				options: {
-					scales: {
-						x: {
-							type: 'time', // Use time scale for x-axis
-							time: {
-								parser: 'luxon', // Use Luxon for date parsing
-								unit: 'hour'
-							},
-							title: {
-								display: true,
-								text: 'Time'
-							}
-						},
-						y: {
-							beginAtZero: true,
-							title: {
-								display: true,
-								text: 'Value'
-							}
-						}
-					}
-				}
-			});
+// Function to fetch weather data from the API and update the chart
+async function fetchDataAndDrawChart(lat, lon) {
+    // API call and chart update logic goes here
+}
 
-            // Add a click event listener to the map to handle map clicks
-            map.on('click', (e) => {
-                const { lat, lng } = e.latlng;
-                marker.setLatLng([lat, lng]);
-                fetchDataAndDrawChart(lat, lng);
-                closeMapPopup(); // Close the map popup after a click
-            });
-        }
+// Function to open the map popup
+function openMapPopup() {
+    document.getElementById('mapPopup').style.display = 'block';
+    document.getElementById('overlay').style.display = 'block';
+    if (!map) {
+        initializeMap();
+    }
+}
 
-        // Function to fetch weather data from the API and update the chart
-        async function fetchDataAndDrawChart(lat, lon) {
-            try {
-                const apiUrl = `https://dmigw.govcloud.dk/v1/forecastedr/collections/harmonie_nea_sf/position?coords=POINT(${lon}%20${lat})&crs=crs84&parameter-name=temperature-0m,61-0.0-105&f=GeoJSON&api-key=56f68523-54d2-43f8-88bc-ab40a266e8d6`;
-                const response = await fetch(apiUrl);
-                const data = await response.json();
+// Function to close the map popup
+function closeMapPopup() {
+    document.getElementById('mapPopup').style.display = 'none';
+    document.getElementById('overlay').style.display = 'none';
+}
 
-                // Update chart data
-                const labels = [];
-                const temperatureData = [];
-                const precipitationData = [];
+// Event listeners for buttons
+document.getElementById('showMapButton').addEventListener('click', openMapPopup);
+document.getElementById('closeMapButton').addEventListener('click', closeMapPopup);
+document.getElementById('overlay').addEventListener('click', closeMapPopup);
 
-                data.features.forEach(feature => {
-                    labels.push(new Date(feature.properties.step));
-                    temperatureData.push(feature.properties['temperature-0m']);
-                    precipitationData.push(feature.properties['61-0.0-105']);
-                });
-
-                chart.data.labels = labels;
-                chart.data.datasets[0].data = temperatureData;
-                chart.data.datasets[1].data = precipitationData;
-
-                chart.update();
-
-                // Reverse geocode to get the nearest city name
-                const cityName = await reverseGeocode(lat, lon);
-                document.title = `Weather Data for ${cityName}`;
-            } catch (error) {
-                console.error('Error fetching data:', error);
+// Initialize Chart.js
+const ctx = document.getElementById('weatherChart').getContext('2d');
+chart = new Chart(ctx, {
+    type: 'line',
+    data: {
+        labels: [],
+        datasets: [{
+            label: 'Temperature (°C)',
+            data: [],
+            borderColor: 'rgba(75, 192, 192, 1)',
+            fill: false
+        }, {
+            label: 'Precipitation',
+            data: [],
+            borderColor: 'rgba(255, 99, 132, 1)',
+            fill: false
+        }]
+    },
+    options: {
+        scales: {
+            x: {
+                type: 'time',
+                time: {
+                    parser: 'luxon',
+                    unit: 'hour'
+                },
+                title: {
+                    display: true,
+                    text: 'Time'
+                }
+            },
+            y: {
+                beginAtZero: true,
+                title: {
+                    display: true,
+                    text: 'Value'
+                }
             }
         }
+    }
+});
 
-        // Function to open the map popup
-        function openMapPopup() {
-            const mapPopup = document.getElementById('mapPopup');
-            mapPopup.style.display = 'block';
-        }
-
-        // Function to close the map popup
-        function closeMapPopup() {
-            const mapPopup = document.getElementById('mapPopup');
-            mapPopup.style.display = 'none';
-        }
-
-        // Function to close the map popup when the "Close Map" button is clicked
-        document.getElementById('closeMapButton').addEventListener('click', () => {
-            closeMapPopup();
-        });
-
-        // Function to show the map in a popup when the button is clicked
-        document.getElementById('showMapButton').addEventListener('click', () => {
-            if (!map) {
-                initializeMap();
-            }
-            openMapPopup();
-        });
-		
-		// Reverse geocoding function (you can use a reverse geocoding service of your choice)
-        async function reverseGeocode(lat, lon) {
-            // Replace with your reverse geocoding logic or service
-            // For example, you can use the Nominatim API
-            const response = await fetch(`https://nominatim.openstreetmap.org/reverse?format=json&lat=${lat}&lon=${lon}`);
-            const data = await response.json();
-            return data.display_name;
-        }
     </script>
 </body>
 </html>
