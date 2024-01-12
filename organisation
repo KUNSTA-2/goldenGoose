@@ -1,0 +1,703 @@
+<div class="organisations-container">
+   <a class="respon-org direction-section Direktion-1" href="https://www.dmi.dk/index.php?id=597#open-direktion">
+      <h2>Direktion</h2>
+      <p>Direktør Marianne Thyrring</p>
+   </a>
+   <div id="open-direktion" class="modal-infoWindow">
+      <div>
+         <a href="https://www.dmi.dk/index.php?id=597#a" title="Close" class="modal-closeinfoWindow">Luk</a>
+         <div class="modal-infoContainer">
+            <div class="modal_introText-1">
+               <h2>Direktør<br>Marianne Thyrring</h2>
+               <p>Mail: mth@dmi.dk</p>
+            </div>
+            <div class="modal_introImg-1">
+               <img class="jubiMedia" src="/fileadmin/assets/Images/Om-DMI/Marianne_Thyrring-small.jpg" alt="Portræt af Marianne Thyrring">
+            </div>
+            <div class="modal_introText-2">
+               <h2>Vicedirektør<br>Ulrik Korsholm</h2>
+               <p>Mail: usn@dmi.dk</p>
+            </div>
+            <div class="modal_introImg-2">
+               <img class="jubiMedia" src="/fileadmin/assets/Images/Om-DMI/Ulrik_Korsholm-Small.jpg" alt="Portræt af Ulrik Korsholm">
+            </div>
+            <div class="modal_introText-3">
+               <h2>Vicedirektør<br>Thomas Kjellberg Christensen</h2>
+               <p>Mail: tkc@dmi.dk</p>
+            </div>
+            <div class="modal_introImg-3">
+               <img class="jubiMedia" src="/fileadmin/assets/Images/Om-DMI/Thomas_Kjelberg-small.jpg" alt="Portræt af Thomas Kjellberg">
+            </div>
+         </div>
+      </div>
+   </div>
+   <a class="respon-org afdeling-ledelse Afdeling-0" href="https://www.dmi.dk/index.php?id=597#open-afdeling0">
+      <h3>Ressourcer og Risikostyring</h3>
+   </a>
+   <div id="open-afdeling0" class="modal-infoWindow">
+      <div>
+         <a href="https://www.dmi.dk/index.php?id=597#a" title="Close" class="modal-closeinfoWindow">Luk</a>
+         <div class="modal-infoContainer">
+            <div class="modal_introText-1">
+               <h2>Afdelingschef<br>Henrik Stub</h2>
+               <p>Mail: hst@dmi.dk</p>
+            </div>
+            <div class="modal_introImg-1">
+               <img class="jubiMedia" src="/fileadmin/assets/Images/Om-DMI/Henrik_Stub.jpg" alt="Portræt af Henrik Stub">
+            </div>
+            <div class="modal_introLongtext-1">
+               <p>I Risikostyring og Compliance arbejder generalister og specialister med efterlevelse af eksterne krav til f.eks. cyber- og informationssikkerhed, GDPR samt risikostyring. Opgaven, vedrørende prioritering og ressourceallokering af DMI's interne IT-udviklingsopgaver, er ligeledes forankret her. Desuden giver enheden juridisk bistand til kontrakter.</p>
+            </div>
+         </div>
+      </div>
+   </div>
+   <a class="respon-org afdeling-ledelse Afdeling-1" href="https://www.dmi.dk/index.php?id=597#open-afdeling1">
+      <h3>Vejr og Varsler</h3>
+   </a>
+   <div id="open-afdeling1" class="modal-infoWindow">
+      <div>
+         <a href="https://www.dmi.dk/index.php?id=597#a" title="Close" class="modal-closeinfoWindow">Luk</a>
+         <div class="modal-infoContainer">
+            <div class="modal_introText-1">
+               <h2>Afdelingschef<br>Gunnar Wedell van der Leeden</h2>
+               <p>Mail: gvl@dmi.dk</p>
+            </div>
+            <div class="modal_introImg-1">
+               <img class="jubiMedia" src="/fileadmin/assets/Images/Om-DMI/Placeholder.jpg" alt="Portræt af Gunnar Wedell van der Leeden">
+            </div>
+            <div class="modal_introLongtext-1">
+               <p></p>
+            </div>
+         </div>
+      </div>
+   </div>
+   <a class="respon-org afdeling-ledelse Afdeling-2" href="https://www.dmi.dk/index.php?id=597#open-afdeling2">
+      <h3>IT og Observationer</h3>
+   </a>
+   <div id="open-afdeling2" class="modal-infoWindow">
+      <div>
+         <a href="https://www.dmi.dk/index.php?id=597#a" title="Close" class="modal-closeinfoWindow">Luk</a>
+         <div class="modal-infoContainer">
+            <div class="modal_introText-1">
+               <h2>Afdelingschef<br>Morten Hald Nielsen</h2>
+               <p>Mail: mha@dmi.dk</p>
+            </div>
+            <div class="modal_introImg-1">
+               <img class="jubiMedia" src="/fileadmin/assets/Images/Om-DMI/Placeholder.jpg" alt="">
+            </div>
+            <div class="modal_introLongtext-1">
+               <p>Afdelingen IT og Observationer står for drift, udvikling og vedligehold af DMI’s observationsinfrastruktur, som indsamler meteorologiske observationer for Rigsfælleskabet. Endvidere er det afdelingens opgave at udvikle og sikre stabil og robust drift af DMI’s netværk, servere, supercomputer og IT-arbejdsplader. Afdelingen IT og Observationer består af de tre enheder Supercomputer og IT-platforme, Observationsinfrastruktur, Support og Netværk.</p>
+            </div>
+         </div>
+      </div>
+   </div>
+   <a class="respon-org afdeling-ledelse Afdeling-3" href="https://www.dmi.dk/index.php?id=597#open-afdeling3">
+      <h3>Data og Digitalisering</h3>
+   </a>
+   <div id="open-afdeling3" class="modal-infoWindow">
+      <div>
+         <a href="https://www.dmi.dk/index.php?id=597#a" title="Close" class="modal-closeinfoWindow">Luk</a>
+         <div class="modal-infoContainer">
+            <div class="modal_introText-1">
+               <h2>Afdelingschef<br>Morten Thaarup</h2>
+               <p>Mail: mot@dmi.dk</p>
+            </div>
+            <div class="modal_introImg-1">
+               <img class="jubiMedia" src="/fileadmin/assets/Images/Om-DMI/Morton_Thaarup.jpg" alt="Portræt af Morten Thaarup">
+            </div>
+            <div class="modal_introLongtext-1">
+               <p>Afdelingen Data & Digitalisering understøtter både interne og eksterne brugere og samarbejdspartnere med data, digitale løsninger og rådgivning. Afdelingen består af tre enheder – Applikationer, Data, samt Rådgivning og Digitalisering. Vi arbejder tæt sammen på tværs af enheder i afdelingen og med de andre afdelinger på DMI.</p>
+            </div>
+         </div>
+      </div>
+   </div>
+   <a class="respon-org afdeling-ledelse Afdeling-4" href="https://www.dmi.dk/index.php?id=597#open-afdeling4">
+      <h3>Vejrforskning</h3>
+   </a>
+   <div id="open-afdeling4" class="modal-infoWindow">
+      <div>
+         <a href="https://www.dmi.dk/index.php?id=597#a" title="Close" class="modal-closeinfoWindow">Luk</a>
+         <div class="modal-infoContainer">
+            <div class="modal_introText-1">
+               <h2>Afdelingschef<br>Anna-Sofie Skjervedal</h2>
+               <p>Mail: ask@dmi.dk</p>
+            </div>
+            <div class="modal_introImg-1">
+               <img class="jubiMedia" src="/fileadmin/assets/Images/Om-DMI/Placeholder.jpg" alt="Placeholder">
+            </div>
+            <div class="modal_introLongtext-1">
+               <p>Vejrforskningsafdelingen har fokus på varsling af farligt vejr og oversvømmelser, og på udvikling af de daglige vejrudsigter, ikke mindst i lyset af den grønne omstilling, hvor vi alle bliver mere afhængig af sol og vind. Vejrforskning udfører operationel forskning og udvikler modeller og produkter i tæt samarbejde med de vagtgående meteorologer. Vejrforskning omfatter to enheder; Oversvømmelse og Hydrologi samt Vejr og Hav.</p>
+            </div>
+         </div>
+      </div>
+   </div>
+   <a class="respon-org afdeling-ledelse Afdeling-5" href="https://www.dmi.dk/index.php?id=597#open-afdeling5">
+      <h3>Nationalt Center for Klimaforskning</h3>
+   </a>
+   <div id="open-afdeling5" class="modal-infoWindow">
+      <div>
+         <a href="https://www.dmi.dk/index.php?id=597#a" title="Close" class="modal-closeinfoWindow">Luk</a>
+         <div class="modal-infoContainer">
+            <div class="modal_introText-1">
+               <h2>Afdelingschef<br>Adrian Lema</h2>
+               <p>Mail: adle@dmi.dk</p>
+            </div>
+            <div class="modal_introImg-1">
+               <img class="jubiMedia" src="/fileadmin/assets/Images/Om-DMI/Adrian_Lema.jpg" alt="Portræt af Adrian Lema">
+            </div>
+            <div class="modal_introLongtext-1">
+               <p>Afdelingen Nationalt Center for Klimaforskning (NCKF) udfører klimavidenskabelig forskning og rådgivning om klimaforandringer som hovedområde. NCKF er et nationalt center, der producerer og samler viden om klimaet. NCKF understøtter DMI’s rolle som regeringens klimavidenskabelige rådgiver og har fokus på at understøtte myndighedsrådgivningen. Både forskning og rådgivning sker i tæt samarbejde med danske og internationale samarbejdspartnere såsom EUMETSAT, ESA og EU Copernicus. NCKF omfatter tre enheder; Globalt Klima, Rigsfællesskabets Klima samt Satellitter og Arktis.</p>
+            </div>
+         </div>
+      </div>
+   </div>
+   <a class="respon-org afdeling-ledelse Afdeling-6" href="https://www.dmi.dk/index.php?id=597#open-afdeling6">
+      <h3>Politik, Strategi og Kommunikation</h3>
+   </a>
+   <div id="open-afdeling6" class="modal-infoWindow">
+      <div>
+         <a href="https://www.dmi.dk/index.php?id=597#a" title="Close" class="modal-closeinfoWindow">Luk</a>
+         <div class="modal-infoContainer">
+            <div class="modal_introText-1">
+               <h2>Afdelingschef<br>Stine Wamberg Broch</h2>
+               <p>Mail: swb@dmi.dk</p>
+            </div>
+            <div class="modal_introImg-1">
+               <img class="jubiMedia" src="/fileadmin/assets/Images/Om-DMI/Placeholder.jpg" alt="">
+            </div>
+            <div class="modal_introLongtext-1">
+               <p>I Politik, Strategi og Kommunikation sætter vi DMI’s faglighed i spil og etablerer nye partnerskaber. Vi har et eksternt fokus mod politikere, borgere, presse og samfund, og sikrer at DMI byder ind med nye løsninger og faglig rådgivning som led i den grønne omstilling mod et klimaneutralt samfund i vækst og balance.</p>
+            </div>
+         </div>
+      </div>
+   </div>
+   <div class="line-1">
+      <hr>
+   </div>
+   <div class="line-2">
+      <hr>
+   </div>
+   <div class="line-3">
+      <hr>
+   </div>
+   <div class="line-4">
+      <hr>
+   </div>
+   <a class="respon-org afdeling-section Sektion-0-1" href="https://www.dmi.dk/index.php?id=597#open-sektion0-1">
+      <h4>HR</h4>
+   </a>
+   <div id="open-sektion0-1" class="modal-infoWindow">
+      <div>
+         <a href="https://www.dmi.dk/index.php?id=597#a" title="Close" class="modal-closeinfoWindow">Luk</a>
+         <div class="modal-infoContainer">
+            <div class="modal_introText-1">
+               <h2>Leder<br>Linda Hebeltoft Bergstrøm</h2>
+               <p>Mail: lbe@dmi.dk</p>
+            </div>
+            <div class="modal_introImg-1">
+               <img class="jubiMedia" src="/fileadmin/assets/Images/Om-DMI/Placeholder.jpg" alt="Portræt af Linda Hebeltoft Bergstrøm">
+            </div>
+            <div class="modal_introLongtext-1">
+               <p>I HR er vores vigtigste opgave at sikre at DMI er en attraktiv arbejdsplads med effektive processer på HR-området samt at bidrage til at finde de gode løsninger, der både kan udvikle organisationen og give størst mulig værdi for vores ledere og medarbejdere. Vores arbejdsopgaver spænder vidt – lige fra rekruttering til organisationsudvikling – og indebærer bl.a. rekruttering, arbejdsmiljø, personalejura, lønforhandling, analyser, kompetenceforløb, lederudvikling og trivsel m.v.</p>
+            </div>
+         </div>
+      </div>
+   </div>
+   <a class="respon-org afdeling-section Sektion-0-2" href="https://www.dmi.dk/index.php?id=597#open-sektion0-2">
+      <h4>Økonomi og Bygningsdrift</h4>
+   </a>
+   <div id="open-sektion0-2" class="modal-infoWindow">
+      <div>
+         <a href="https://www.dmi.dk/index.php?id=597#a" title="Close" class="modal-closeinfoWindow">Luk</a>
+         <div class="modal-infoContainer">
+            <div class="modal_introText-1">
+               <h2>Afdelingschef<br>Henrik Stub</h2>
+               <p>Mail: hst@dmi.dk</p>
+            </div>
+            <div class="modal_introImg-1">
+               <img class="jubiMedia" src="/fileadmin/assets/Images/Om-DMI/Henrik_Stub.jpg" alt="Portræt af Henrik Stub">
+            </div>
+            <div class="modal_introLongtext-1">
+               <p>I Økonomi og Bygningsdrift arbejder controllere og bogholdere med styring af DMI's sammensatte økonomi, der består af både finanslovsfinansierede områder og indtægtsdækket virksomhed, samt tilskudsfinansierede forskning. Desuden varetager enheden bygningsrelaterede opgaver.</p>
+            </div>
+         </div>
+      </div>
+   </div>
+   <a class="respon-org afdeling-section Sektion-0-3" href="https://www.dmi.dk/index.php?id=597#open-sektion0-3">
+      <h4>Risikostyring og Compliance</h4>
+   </a>
+   <div id="open-sektion0-3" class="modal-infoWindow">
+      <div>
+         <a href="https://www.dmi.dk/index.php?id=597#a" title="Close" class="modal-closeinfoWindow">Luk</a>
+         <div class="modal-infoContainer">
+            <div class="modal_introText-1">
+               <h2>Leder<br>Simon Andersen</h2>
+               <p>Mail: sia@dmi.dk</p>
+            </div>
+            <div class="modal_introImg-1">
+               <img class="jubiMedia" src="/fileadmin/assets/Images/Om-DMI/Placeholder.jpg" alt="Portræt af Simon Andersen">
+            </div>
+            <div class="modal_introLongtext-1">
+               <p>I Risikostyring og Compliance arbejder generalister og specialister med efterlevelse af eksterne krav til f.eks. cyber- og informationssikkerhed, samt risikostyring. Desuden er her forankret opgaver vedrørende prioritering og ressourceallokering af DMI's interne IT-udviklingsopgaver.</p>
+            </div>
+         </div>
+      </div>
+   </div>
+   <a class="respon-org afdeling-section Sektion-1-1" href="https://www.dmi.dk/index.php?id=597#open-sektion1-1">
+      <h4>Arktisk Vejr-og Istjeneste</h4>
+   </a>
+   <div id="open-sektion1-1" class="modal-infoWindow">
+      <div>
+         <a href="https://www.dmi.dk/index.php?id=597#a" title="Close" class="modal-closeinfoWindow">Luk</a>
+         <div class="modal-infoContainer">
+            <div class="modal_introText-1">
+               <h2>Souschef<br>Søren Erik Olufsen</h2>
+               <p>Mail: seo@dmi.dk</p>
+            </div>
+            <div class="modal_introImg-1">
+               <img class="jubiMedia" src="/fileadmin/assets/Images/Om-DMI/Soren_Olufsen.jpg" alt="Portræt af Søren Erik Olufsen">
+            </div>
+            <div class="modal_introLongtext-1">
+               <p></p>
+            </div>
+         </div>
+      </div>
+   </div>
+   <a class="respon-org afdeling-section Sektion-1-2" href="https://www.dmi.dk/index.php?id=597#open-sektion1-2">
+      <h4>Militære Varsler og Vejrudsigter</h4>
+   </a>
+   <div id="open-sektion1-2" class="modal-infoWindow">
+      <div>
+         <a href="https://www.dmi.dk/index.php?id=597#a" title="Close" class="modal-closeinfoWindow">Luk</a>
+         <div class="modal-infoContainer">
+            <div class="modal_introText-1">
+               <h2>Leder<br>Kristian Thestrup</h2>
+               <p>Mail: krt@dmi.dk</p>
+            </div>
+            <div class="modal_introImg-1">
+               <img class="jubiMedia" src="/fileadmin/assets/Images/Om-DMI/Placeholder.jpg" alt="Portræt af Søren Krarup-Jensen">
+            </div>
+            <div class="modal_introLongtext-1">
+               <p></p>
+            </div>
+         </div>
+      </div>
+   </div>
+   <a class="respon-org afdeling-section Sektion-1-3" href="https://www.dmi.dk/index.php?id=597#open-sektion1-3">
+      <h4>Civile Varsler og Vejrudsigter</h4>
+   </a>
+   <div id="open-sektion1-3" class="modal-infoWindow">
+      <div>
+         <a href="https://www.dmi.dk/index.php?id=597#a" title="Close" class="modal-closeinfoWindow">Luk</a>
+         <div class="modal-infoContainer">
+            <div class="modal_introText-1">
+               <h2>Leder<br>Ole Olsgaard Kristensen</h2>
+               <p>Mail: ook@dmi.dk</p>
+            </div>
+            <div class="modal_introImg-1">
+               <img class="jubiMedia" src="/fileadmin/assets/Images/Om-DMI/Placeholder.jpg" alt="Portræt af Ole Olsgaard Kristensen">
+            </div>
+            <div class="modal_introLongtext-1">
+               <p></p>
+            </div>
+         </div>
+      </div>
+   </div>
+   <a class="respon-org afdeling-section Sektion-2-1" href="https://www.dmi.dk/index.php?id=597#open-sektion2-1">
+      <h4>Support og Netværk</h4>
+   </a>
+   <div id="open-sektion2-1" class="modal-infoWindow">
+      <div>
+         <a href="https://www.dmi.dk/index.php?id=597#a" title="Close" class="modal-closeinfoWindow">Luk</a>
+         <div class="modal-infoContainer">
+            <div class="modal_introText-1">
+               <h2>Souschef<br>Jesper Bending</h2>
+               <p>Mail: jebe@dmi.dk</p>
+            </div>
+            <div class="modal_introImg-1">
+               <img class="jubiMedia" src="/fileadmin/assets/Images/Om-DMI/Placeholder.jpg" alt="Portræt af NA">
+            </div>
+            <div class="modal_introLongtext-1">
+               <p>I enheden Support og Netværk sikres 24/7 overvågning og support af DMI’s systemer. Enheden yder IT-support til interne og eksterne brugere og sikrer velfungerende IT-arbejdsplader. Support og Netværk leverer relevant og robust infrastruktur, som understøtter en moderne og sammenhængende IT-platform for DMI’s brugere. Enheden står for installation og konfiguration af hardware, håndtering af DMI’s interne og eksterne linjer samt vedligeholdelse af hardware, netværk og IT-udstyr.</p>
+            </div>
+         </div>
+      </div>
+   </div>
+   <a class="respon-org afdeling-section Sektion-2-2" href="https://www.dmi.dk/index.php?id=597#open-sektion2-2">
+      <h4>Observationsinfrastruktur</h4>
+   </a>
+   <div id="open-sektion2-2" class="modal-infoWindow">
+      <div>
+         <a href="https://www.dmi.dk/index.php?id=597#a" title="Close" class="modal-closeinfoWindow">Luk</a>
+         <div class="modal-infoContainer">
+            <div class="modal_introText-1">
+               <h2>Leder<br>Jens Q. Hansen</h2>
+               <p>Mail: jqh@dmi.dk</p>
+            </div>
+            <div class="modal_introImg-1">
+               <img class="jubiMedia" src="/fileadmin/assets/Images/Om-DMI/Placeholder.jpg" alt="Portræt af Jens Q. Hansen">
+            </div>
+            <div class="modal_introLongtext-1">
+               <p>I enheden Observationsinfrastruktur arbejder vi med tilvejebringelse af meteorologiske observationer fra Rigsfællesskabet. Vi udvikler og driver alle typer meteorologiske målesystemer på land, til havs og i luften, lige fra enkle nedbørmålere til komplekse vejrradaranlæg og radiosondestationer i Grønland. Vi deltager aktivt i internationale samarbejder på observationsområdet samt arbejder med implementering af nye standarder fra Verdens meteorologiske organisation (World Meteorological Organisation).</p>
+            </div>
+         </div>
+      </div>
+   </div>
+   <a class="respon-org afdeling-section Sektion-2-3" href="https://www.dmi.dk/index.php?id=597#open-sektion2-3">
+      <h4>Supercomputer og IT-platforme</h4>
+   </a>
+   <div id="open-sektion2-3" class="modal-infoWindow">
+      <div>
+         <a href="https://www.dmi.dk/index.php?id=597#a" title="Close" class="modal-closeinfoWindow">Luk</a>
+         <div class="modal-infoContainer">
+            <div class="modal_introText-1">
+               <h2>Leder<br>Eivind Bengtsson</h2>
+               <p>Mail: ebe@dmi.dk</p>
+            </div>
+            <div class="modal_introImg-1">
+               <img class="jubiMedia" src="/fileadmin/assets/Images/Om-DMI/Placeholder.jpg" alt="Portræt af Eivind Bengtsson">
+            </div>
+            <div class="modal_introLongtext-1">
+               <p>I enheden Supercomputer og IT-platforme sørger vi for stabil drift af IT og håndterer beregninger af vejrforudsigelser og klimadata. Vi sørger for dataudveksling med meteorologiske netværk og satellitoperatører og desuden sørger vi for opbevaring og udstilling af DMI’s mange data. Vi fokuserer altid på, at DMI altid skal være tilgængelig og give borgere, beredskab og samarbejdspartnere adgang til det data, der redder menneskeliv og sparer samfundet for ødelæggelser og energispild.</p>
+            </div>
+         </div>
+      </div>
+   </div>
+   <a class="respon-org afdeling-section Sektion-3-1" href="https://www.dmi.dk/index.php?id=597#open-sektion3-1">
+      <h4>Applikationer</h4>
+   </a>
+   <div id="open-sektion3-1" class="modal-infoWindow">
+      <div>
+         <a href="https://www.dmi.dk/index.php?id=597#a" title="Close" class="modal-closeinfoWindow">Luk</a>
+         <div class="modal-infoContainer">
+            <div class="modal_introText-1">
+               <h2>Leder<br>Julia Sommer</h2>
+               <p>Mail: jua@dmi.dk</p>
+            </div>
+            <div class="modal_introImg-1">
+               <img class="jubiMedia" src="/fileadmin/assets/Images/Om-DMI/Julia_Sommer.jpg" alt="Portræt af Julia Sommer">
+            </div>
+            <div class="modal_introLongtext-1">
+               <p>I Applikationer arbejder IT-udviklere med analyse, design og udvikling af DMI’s applikationer, services og hjemmeside. Dermed præsenterer Applikationer DMI’s vejr-, hav- og klimadata til borgerne i hele Rigsfællesskabet, beredskaber og kunder, der har særlige behov for vejrinformationer. Dette omfatter dmi.dk samt DMI’s Frie Data-distributionsløsning til værktøjer og fagsystemer til DMI’s meteorologer.</p>
+            </div>
+         </div>
+      </div>
+   </div>
+   <a class="respon-org afdeling-section Sektion-3-2" href="https://www.dmi.dk/index.php?id=597#open-sektion3-2">
+      <h4>Data</h4>
+   </a>
+   <div id="open-sektion3-2" class="modal-infoWindow">
+      <div>
+         <a href="https://www.dmi.dk/index.php?id=597#a" title="Close" class="modal-closeinfoWindow">Luk</a>
+         <div class="modal-infoContainer">
+            <div class="modal_introText-1">
+               <h2>Leder<br>Alex Andresen</h2>
+               <p>Mail: aan@dmi.dk</p>
+            </div>
+            <div class="modal_introImg-1">
+               <img class="jubiMedia" src="/fileadmin/assets/Images/Om-DMI/Placeholder.jpg" alt="Portræt af Alex Andresen">
+            </div>
+            <div class="modal_introLongtext-1">
+               <p>I Data arbejder IT-udviklere med modtagelse, processering, transformation, lagring og distribution af data. Data kommer fra DMI’s eget observationsnet, fra DMI’s supercomputer, fra internationale og nationale organisationer samt samarbejdspartnere. Der er tale om mange forskellige typer data; vejrobservationer, nedbørsmålinger, vandstandsmålinger, klimadata, radiosonder, snedybder, radardata, prognosedata og en masse satellitdata. Data bruges både internt på DMI, vises på dmi.dk samt sendes videre ud i verden til andre organisationer og via Frie Data.</p>
+            </div>
+         </div>
+      </div>
+   </div>
+   <a class="respon-org afdeling-section Sektion-3-3" href="https://www.dmi.dk/index.php?id=597#open-sektion3-3">
+      <h4>Rådgivning og Digitalisering</h4>
+   </a>
+   <div id="open-sektion3-3" class="modal-infoWindow">
+      <div>
+         <a href="https://www.dmi.dk/index.php?id=597#a" title="Close" class="modal-closeinfoWindow">Luk</a>
+         <div class="modal-infoContainer">
+            <div class="modal_introText-1">
+               <h2>Leder<br>Anne Marie Munk Jørgensen</h2>
+               <p>Mail: ammj@dmi.dk</p>
+            </div>
+            <div class="modal_introImg-1">
+               <img class="jubiMedia" src="/fileadmin/assets/Images/Om-DMI/Placeholder.jpg" alt="Portræt af Anne Marie Munk Jørgensen">
+            </div>
+            <div class="modal_introLongtext-1">
+               <p>Rådgivning og Digitalisering yder rådgivning og formidling om brugen af DMI’s data og produkter - internt såvel som eksternt til brugere, kunder og samarbejdspartnere. Rådgivning og Digitalisering er også en IT-arkitektenhed, som understøtter tværgående og internationale projekter med viden og rådgivning om IT-arkitektur og digitalisering.</p>
+            </div>
+         </div>
+      </div>
+   </div>
+   <a class="respon-org afdeling-section Sektion-4-1" href="https://www.dmi.dk/index.php?id=597#open-sektion4-1">
+      <h4>Oversvømmelser og Hydrologi</h4>
+   </a>
+   <div id="open-sektion4-1" class="modal-infoWindow">
+      <div>
+         <a href="https://www.dmi.dk/index.php?id=597#a" title="Close" class="modal-closeinfoWindow">Luk</a>
+         <div class="modal-infoContainer">
+            <div class="modal_introText-1">
+               <h2>Leder<br>Simon Kramme</h2>
+               <p>Mail: sikr@dmi.dk</p>
+            </div>
+            <div class="modal_introImg-1">
+               <img class="jubiMedia" src="/fileadmin/assets/Images/Om-DMI/Placeholder.jpg" alt="Portræt af Simon Kramme">
+            </div>
+            <div class="modal_introLongtext-1">
+               <p>Oversvømmelse og Hydrologi udvikler dataflow og modeller, der skaber grundlag for varsling af oversvømmelser udført af DMI’s meteorologer. Medarbejdernes kompetencer er således bredt forankret inden for hydrologi, it-viden og projektledelse.</p>
+            </div>
+         </div>
+      </div>
+  </div>
+  <a class="respon-org afdeling-section Sektion-4-2" href="https://www.dmi.dk/index.php?id=597#open-sektion4-2">
+      <h4>Vejrmodeller</h4>
+  </a>
+  <div id="open-sektion4-2" class="modal-infoWindow">
+      <div>
+         <a href="https://www.dmi.dk/index.php?id=597#a" title="Close" class="modal-closeinfoWindow">Luk</a>
+         <div class="modal-infoContainer">
+            <div class="modal_introText-1">
+               <h2>Leder<br>Rune Carbuhn Andersen</h2>
+               <p>Mail: rca@dmi.dk</p>
+            </div>
+            <div class="modal_introImg-1">
+               <img class="jubiMedia" src="/fileadmin/assets/Images/Om-DMI/Placeholder.jpg" alt="Portræt af Rune Carbuhn Andersen">
+            </div>
+            <div class="modal_introLongtext-1">
+               <p>Tekst kommer snarligt</p>
+            </div>
+         </div>
+      </div>
+  </div>
+    <a class="respon-org afdeling-section Sektion-4-3" href="https://www.dmi.dk/index.php?id=597#open-sektion4-3">
+      <h4>Hav og Radar</h4>
+   </a>
+   <div id="open-sektion4-3" class="modal-infoWindow">
+      <div>
+         <a href="https://www.dmi.dk/index.php?id=597#a" title="Close" class="modal-closeinfoWindow">Luk</a>
+         <div class="modal-infoContainer">
+            <div class="modal_introText-1">
+               <h2>Leder<br>Morten Andreas Dahl Larsen</h2>
+               <p>Mail: mla@dmi.dk</p>
+            </div>
+            <div class="modal_introImg-1">
+               <img class="jubiMedia" src="/fileadmin/assets/Images/Om-DMI/Placeholder.jpg" alt="Portræt af Rune Carbuhn Andersen">
+            </div>
+            <div class="modal_introLongtext-1">
+               <p>Tekst kommer snarligt</p>
+            </div>
+         </div>
+      </div>
+   </div>
+   <a class="respon-org afdeling-section Sektion-5-1" href="https://www.dmi.dk/index.php?id=597#open-sektion5-1">
+      <h4>Globalt Klima</h4>
+   </a>
+   <div id="open-sektion5-1" class="modal-infoWindow">
+      <div>
+         <a href="https://www.dmi.dk/index.php?id=597#a" title="Close" class="modal-closeinfoWindow">Luk</a>
+         <div class="modal-infoContainer">
+            <div class="modal_introText-1">
+               <h2>Souschef<br>Ole Krarup Leth</h2>
+               <p>Mail: okl@dmi.dk</p>
+            </div>
+            <div class="modal_introImg-1">
+               <img class="jubiMedia" src="/fileadmin/assets/Images/Om-DMI/Ole_Krarup_Leth.jpg" alt="Portræt af Ole Krarup Leth">
+            </div>
+            <div class="modal_introLongtext-1">
+               <p>Globalt Klima har ekspertise i både modellering af det globale klima og satellitovervågning af atmosfæren, herunder Arktis og Nordatlanten og iskappernes rolle i klimasystemet. Avancerede modelberegninger af klima, hav- og havis danner grundlag for fremskrivninger af ændringer i klimaet både i nær og fjern fremtid, og leverer også viden om farvandet omkring Grønland og Arktis til DMI’s operative vejrtjeneste.</p>
+            </div>
+         </div>
+      </div>
+   </div>
+   <a class="respon-org afdeling-section Sektion-5-2" href="https://www.dmi.dk/index.php?id=597#open-sektion5-2">
+      <h4>Rigsfælleskabets Klima</h4>
+   </a>
+   <div id="open-sektion5-2" class="modal-infoWindow">
+      <div>
+         <a href="https://www.dmi.dk/index.php?id=597#a" title="Close" class="modal-closeinfoWindow">Luk</a>
+         <div class="modal-infoContainer">
+            <div class="modal_introText-1">
+               <h2>Leder<br>Rasmus Anker Pedersen</h2>
+               <p>Mail: rap@dmi.dk</p>
+            </div>
+            <div class="modal_introImg-1">
+               <img class="jubiMedia" src="/fileadmin/assets/Images/Om-DMI/Placeholder.jpg" alt="Portræt af Rasmus Anker Pedersen">
+            </div>
+            <div class="modal_introLongtext-1">
+               <p>Rigsfællesskabets Klima har viden om klimaet i Danmark og i Grønland. Et fokus er bl.a. afsmeltningen fra de store iskapper både i Grønland og på Antarktis, der har afgørende indflydelse på fremtidens havniveau i Danmark. Digitale klimamodeller og statistiske analyser er enhedens hovedværktøjer til at udarbejde detaljerede fremskrivninger af fremtidens klima, som kommer samfundet til nytte. Beregningerne danner blandt andet grundlag for DMI’s Klimaatlas, der understøtter klimatilpasningstiltag i hele Danmark.</p>
+            </div>
+         </div>
+      </div>
+   </div>
+   <a class="respon-org afdeling-section Sektion-5-3" href="https://www.dmi.dk/index.php?id=597#open-sektion5-3">
+      <h4>Satellitter og Arktis</h4>
+   </a>
+   <div id="open-sektion5-3" class="modal-infoWindow">
+      <div>
+         <a href="https://www.dmi.dk/index.php?id=597#a" title="Close" class="modal-closeinfoWindow">Luk</a>
+         <div class="modal-infoContainer">
+            <div class="modal_introText-1">
+               <h2>Leder<br>Jacob L. Høyer</h2>
+               <p>Mail: jlh@dmi.dk</p>
+            </div>
+            <div class="modal_introImg-1">
+               <img class="jubiMedia" src="/fileadmin/assets/Images/Om-DMI/Placeholder.jpg" alt="Portræt af Jacob L. Høyer">
+            </div>
+            <div class="modal_introLongtext-1">
+               <p>Satellitter og Arktis anvender satellitobservationer til forskning og til at observere Danmark og Arktis. Enheden observerer klimaforandringer i oceanet og havisen i Arktis, og laver daglige produkter til gavn for borgerne i Danmark og Grønland. Produkterne benyttes desuden til at højne kvaliteten af ocean-, is- og vejrmodeller og i DMI’s istjeneste.</p>
+            </div>
+         </div>
+      </div>
+   </div>
+   <a class="respon-org afdeling-section Sektion-6-1" href="https://www.dmi.dk/index.php?id=597#open-sektion6-1">
+      <h4>Kommunikation og Klimatologi</h4>
+   </a>
+   <div id="open-sektion6-1" class="modal-infoWindow">
+      <div>
+         <a href="https://www.dmi.dk/index.php?id=597#a" title="Close" class="modal-closeinfoWindow">Luk</a>
+         <div class="modal-infoContainer">
+            <div class="modal_introText-1">
+               <h2>Souschef<br>Michael Skelbæk Kamp</h2>
+               <p>Mail: msn@dmi.dk</p>
+            </div>
+            <div class="modal_introImg-1">
+               <img class="jubiMedia" src="/fileadmin/assets/Images/Om-DMI/Michael-S-Kamp.jpg" alt="Portræt af Michael Skelbæ">
+            </div>
+            <div class="modal_introLongtext-1">
+               <p>Kommunikation og Klimatologi understøtter presse, borgere og samfund med information om vejr, klima og hav for hele rigsfællesskabet. DMI’s klimatologer kvalitetskontrollerer DMI’s vejrobservationer og sætter dem i system – f.eks. i form af klimanormaler og ekstremværdier. I samarbejde med kommunikationsafdelingen formidles dette videre til presse, borgere og andre interessenter. Kommunikationsafdelingen varetager derudover en bred palette af interne og eksterne kommunikationsopgaver herunder nyheder på dmi.dk, kommunikation på sociale medier samt pressehåndtering.</p>
+            </div>
+         </div>
+      </div>
+   </div>
+   <a class="respon-org afdeling-section Sektion-6-2" href="https://www.dmi.dk/index.php?id=597#open-sektion6-2">
+      <h4>Politik og Strategi</h4>
+   </a>
+   <div id="open-sektion6-2" class="modal-infoWindow">
+      <div>
+         <a href="https://www.dmi.dk/index.php?id=597#a" title="Close" class="modal-closeinfoWindow">Luk</a>
+         <div class="modal-infoContainer">
+            <div class="modal_introText-1">
+               <h2>Leder<br>Aske Højby Müller</h2>
+               <p>Mail: asm@dmi.dk</p>
+            </div>
+            <div class="modal_introImg-1">
+               <img class="jubiMedia" src="/fileadmin/assets/Images/Om-DMI/Placeholder.jpg" alt="Portræt af NA">
+            </div>
+            <div class="modal_introLongtext-1">
+               <p>Politik og Strategi har mange opgaver rettet mod departementet og ministerbetjening. Her hviler et skarpt strategisk blik ud mod samfundet og den dagsorden, der præger landskabet her og nu. Det er også i Politik og Strategi, at DMI’s kontaktpunkt for IPCC ligger forankret. Dermed ligger formidling af globale klimaforandringer også i Politik og Strategi.</p>
+            </div>
+         </div>
+      </div>
+   </div>
+   <a class="respon-org afdeling-section Sektion-1-4" href="https://www.dmi.dk/index.php?id=597#open-prosektion-1-4">
+      <h4>Udvikling og Projekter</h4>
+   </a>
+   <div id="open-prosektion-1-4" class="modal-infoWindow">
+      <div>
+         <a href="https://www.dmi.dk/index.php?id=597#a" title="Close" class="modal-closeinfoWindow">Luk</a>
+         <div class="modal-infoContainer">
+            <div class="modal_introText-1">
+               <h2>Leder<br>Janne Hansen</h2>
+               <p>Mail: jrtb@dmi.dk</p>
+            </div>
+            <div class="modal_introImg-1">
+               <img class="jubiMedia" src="/fileadmin/assets/Images/Om-DMI/Placeholder.jpg" alt="Portræt af NA">
+            </div>
+            <div class="modal_introLongtext-1">
+               <p></p>
+            </div>
+         </div>
+      </div>
+   </div>
+   <a class="respon-org afdeling-section Sektion-1-5" href="https://www.dmi.dk/index.php?id=597#open-bersektion-1-5">
+  <h4>Beredskab</h4>
+   </a>
+   <div id="open-bersektion-1-5" class="modal-infoWindow">
+      <div>
+         <a href="https://www.dmi.dk/index.php?id=597#a" title="Close" class="modal-closeinfoWindow">Luk</a>
+         <div class="modal-infoContainer">
+            <div class="modal_introText-1">
+               <h2>Afdelingschef<br>Gunnar Wedell</h2>
+               <p>Mail: gvl@dmi.dk</p>
+            </div>
+            <div class="modal_introImg-1">
+               <img class="jubiMedia" src="/fileadmin/assets/Images/Om-DMI/Placeholder.jpg" alt="Portræt af Gunnar Wedell">
+            </div>
+            <div class="modal_introText-2">
+               <h2>Beredskabschef<br>Knud Jacob Simonsen</h2>
+               <p>Mail: kjs@dmi.dk</p>
+            </div>
+            <div class="modal_introImg-2">
+               <img class="jubiMedia" src="/fileadmin/assets/Images/Om-DMI/Placeholder.jpg" alt="Portræt af Knud Jacob Simonsen">
+            </div>
+            <div class="modal_introLongtext-1">
+               <p></p>
+            </div>
+         </div>
+      </div>
+   </div>
+   <a class="respon-org sekre-section SekSektion-2" href="https://www.dmi.dk/index.php?id=597#open-seksektion-2">
+      <h4>Fælles sekretariatet</h4>
+   </a>
+   <div id="open-seksektion-2" class="modal-infoWindow">
+      <div>
+         <a href="https://www.dmi.dk/index.php?id=597#a" title="Close" class="modal-closeinfoWindow">Luk</a>
+         <div class="modal-infoContainer">
+            <div class="modal_introText-1">
+               <h2>Leder<br>Jesper Bending</h2>
+               <p>Mail: jebe@dmi</p>
+            </div>
+            <div class="modal_introImg-1">
+               <img class="jubiMedia" src="/fileadmin/assets/Images/Om-DMI/Placeholder.jpg" alt="Portræt af NA">
+            </div>
+            <div class="modal_introLongtext-1">
+               <p>I enheden IT-sekretariatet servicerer vi de to afdelinger IT og Observationer og Data og Digitalisering med diverse former for økonomi- og generalistopgaver. Vi er et tværgående sekretariatet, der holder orden i penalhuset i det daglige og har et tæt samarbejde med lederne i de to afdelinger samt resten af huset. Blandt opgaverne, der løses i IT-sekretariatet er: Notatskrivning, mødeplanlægning, ad hoc projektopgaver, koordinering af bestillinger samt diverse budget- og økonomiopgaver.</p>
+            </div>
+         </div>
+      </div>
+   </div>
+   <a class="respon-org sekre-section SekSektion-3" href="https://www.dmi.dk/index.php?id=597#open-seksektion-3">
+      <h4>Fælles sekretariatet</h4>
+   </a>
+   <div id="open-seksektion-3" class="modal-infoWindow">
+      <div>
+         <a href="https://www.dmi.dk/index.php?id=597#a" title="Close" class="modal-closeinfoWindow">Luk</a>
+         <div class="modal-infoContainer">
+            <div class="modal_introText-1">
+               <h2>Afdelingschef<br>Adrian Lema</h2>
+               <p>Mail: adle@dmi.dk</p>
+            </div>
+            <div class="modal_introImg-1">
+               <img class="jubiMedia" src="/fileadmin/assets/Images/Om-DMI/Adrian_Lema.jpg" alt="Portræt af Adrian Lema">
+            </div>
+            <div class="modal_introLongtext-1">
+               <p>Forskningssekretariatet yder administrativ assistance til de to afdelinger, Vejrforskning og Nationalt Center for Klimaforskning, med f.eks. budget og regnskab, understøttelse af forskningskontrakter og -ansøgninger, lokal kontering af udgifter, journalisering, timeregistrering, kalenderstyring, dokumentation og rapportering i henhold til de gældende regler og håndtering af eksterne forskningsbevillinger.</p>
+            </div>
+         </div>
+      </div>
+   </div>
+   <a class="respon-org sekre-section SekSektion-4" href="https://www.dmi.dk/index.php?id=597#open-seksektion-4">
+      <h4>Direktionssekretariet</h4>
+   </a>
+   <div id="open-seksektion-4" class="modal-infoWindow">
+      <div>
+         <a href="https://www.dmi.dk/index.php?id=597#a" title="Close" class="modal-closeinfoWindow">Luk</a>
+         <div class="modal-infoContainer">
+            <div class="modal_introText-1">
+               <h2>Leder<br>Aske Højby Müller</h2>
+               <p>Mail: asm@dmi.dk</p>
+            </div>
+            <div class="modal_introImg-1">
+               <img class="jubiMedia" src="/fileadmin/assets/Images/Om-DMI/Placeholder.jpg" alt="Portræt af NA">
+            </div>
+            <div class="modal_introLongtext-1">
+               <p>PSK sekretariat understøtter DMI’s direktion med alt fra kalenderstyring, mødeplanlægning til organisering af udenlandske rejser og internationale møder. Som i HR samt Kommunikation og Klimatologi ligger der også en stor del arbejde med intern kommunikation.</p>
+            </div>
+         </div>
+      </div>
+   </div>
+</div>
+
+<script>
+   window.onkeyup = function(e) {
+   var event = e.which || e.keyCode || 0; // .which with fallback
+   
+     if (event == 27) { // ESC Key
+       window.location.href = 'https://www.dmi.dk/index.php?id=597/#'; // Navigate to URL
+     }
+   }
+</script>
